@@ -41,8 +41,12 @@ color: #666;
 text-decoration: none;
 }
 
+#body div.sub-title a:hover{
+	text-decoration: underline;
+}
 
 #body div.title{
+transition: color linear 3s;
 font-size: 100px;
 font-weight: lighter;
 letter-spacing: 0.51em;
@@ -79,13 +83,36 @@ transition: background-color 3s ease; /* future-proof */
 -o-transition: background-color 3s ease;
 -ms-transition: background-color 3s ease;/* IE10+ only */
 }
+
+#github{
+background-color: #a9F;
+width: 200px;
+transform: rotate(45deg);
+position: absolute;
+right: -45px;
+top: 28px;
+text-align: center;
+color: #FFF;
+font-weight: bold;
+padding: 9px 0px;
+font-size: 17px;
+box-shadow: 0px 2px 2px #DDD;
+transition: box-shadow 1s ease;
+}
+
+#github:hover{
+cursor: pointer;
+background-color: #89F;
+box-shadow: 0px 8px 4px #777;
+}
 </style>
 	</head>
-<body id="selector">
+<body>
+<div id="github">Github</div>
 <div id="body">
 	<div class="menu selector">
 		<div class="title">CRUD</div>
-		<div class="sub-title"><a href="">Create</a> | <a href="">Read</a> | <a href="">Update</a> | <a href="">Delete</a></div>
+		<div class="sub-title"><a href="create.html">Create</a> | <a href="">Read</a> | <a href="">Update</a> | <a href="">Delete</a></div>
 	</div>
 </div>
 
@@ -98,6 +125,7 @@ transition: background-color 3s ease; /* future-proof */
 function randomColor () {
 	var color = '#'+Math.floor(Math.random()*16777215).toString(16);
 	$('body').css('border-top-color',color);
+	$('.title').css('color', color);
 	$('.smenu').css('background-color',color);
 }
 jQuery(document).ready(function(){

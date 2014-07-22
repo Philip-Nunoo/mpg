@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nav make</title>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,700|Dancing+Script:400,700|Roboto:400,100,500italic,900' rel='stylesheet' type='text/css'> -->
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200,700|Dancing+Script:400,700|Roboto:400,100,500italic,900|Advent+Pro:400,100,500,600);
+
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'Dancing Script', cursive;*/
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Advent Pro', sans-serif;*/
+* {
+	-webkit-font-smoothing: antialiased;
+}
+body, html{
+	margin: 0px;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+	background-color: #EEE;
+}
+
+nav {
+background-color: #FFF;
+box-shadow: 2px 2px 2px #777;
+margin: auto;
+display: block;
+}
+
+
+nav ul{
+	padding: 0px;
+	margin: 0px;
+}
+
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+}
+
+nav ul li a{
+font-size: 15px;
+text-transform: uppercase;
+text-decoration: none;
+padding: 30px 71px;
+display: block;
+color: #666;
+}
+
+nav ul li a:hover{
+	background-color: #EEE;
+}
+
+header{
+	height: 100%;
+	background-color: #000;
+	color: #fff;
+}
+section{
+	padding: 8px;
+	height: 100%;
+}
+
+footer{
+	background-color: #000;
+	color: #FFF;
+	font-size: 11px;
+	text-align: center;
+	padding: 20px 0px;
+}
+
+.fixed{
+	position: fixed;
+	top: 0;
+    z-index: 10000;
+    width: 100%;
+}
+
+header h1{
+color: #FFF;
+margin: 0px;
+margin: auto;
+display: block;
+text-align: center;
+padding-top: 20%;
+font-size: 80px;
+font-weight: 100;
+font-family: 'Advent Pro', sans-serif;
+}
+
+header h3{
+font-family: 'Dancing Script', cursive;
+text-align: center;
+margin-top: -20px;
+letter-spacing: 1.82em;
+}
+</style>
+</head>
+<body>
+
+<header id="home">
+	<h1>Geee Mmmm Teee</h1>
+	<h3>Never Trust GMT</h3>
+</header>
+<nav>
+	<ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#about">About</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#portfolio">Portfolio</a></li>
+	</ul>
+</nav>
+<section id="about">
+	<div class="container">
+		
+	</div>
+</section>
+<section id="contact">
+	2
+</section>
+<footer>
+	&copy; PMT
+</footer>
+<script type="text/javascript">
+var x = $('nav').offset().top;
+$(window).scroll(function () {
+	var y = $(window).scrollTop(); 
+
+	if (y>=x){
+		if(!$('nav').hasClass('fixed')){
+			$('nav').toggleClass('fixed');
+		}
+	} else{
+		if($('nav').hasClass('fixed')){
+			$('nav').toggleClass('fixed');
+		} else {
+			
+		}
+	}
+});
+
+$("nav a").click(function(evn){
+    evn.preventDefault();
+    $('html, body').scrollTo(this.hash, this.hash); 
+});
+</script>
+</body>
+</html>
