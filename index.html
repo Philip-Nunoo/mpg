@@ -113,15 +113,16 @@ text-decoration: none;
 }
 #github a:hover{
 cursor: pointer;
-background-color: #EFA4A3;
-box-shadow: 0px 2px 4px #777;
+background-color: rgba(0,0,0,0.4);
+/*background-color: #EFA4A3;*/
+box-shadow: 0px 2px 2px #555;
 }
 </style>
 	</head>
 <body>
 <div id="github">
-	<a href="http://philip-nunoo.github.io/">Blog</a>
-	<a href="http://github.com/Philip-Nunoo">Github</a>
+	<a href="http://philip-nunoo.github.io/" class="m">Blog</a>
+	<a href="http://github.com/Philip-Nunoo" class="m">Github</a>
 </div>
 <div id="body">
 
@@ -145,6 +146,7 @@ function randomColor () {
 	$('body').css('border-top-color',color);
 	$('.title').css('color', color);
 	$('.smenu').css('background-color',color);
+	$('.m').css('background-color',color);
 }
 jQuery(document).ready(function(){
 	randomColor();
