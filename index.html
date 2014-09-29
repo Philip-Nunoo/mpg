@@ -23,12 +23,18 @@ transition: border-top-color 3s ease;
 }
 
 #body{
-min-height: 86%;
+min-height: 94%;
 }
 
 #body div.menu{	
-padding: 18% 0px;
 width: 31%;
+margin: auto;
+padding-top: 10%;
+}
+
+#body div.menu img{
+width: 55%;
+display: block;
 margin: auto;
 }
 
@@ -85,32 +91,42 @@ transition: background-color 3s ease; /* future-proof */
 }
 
 #github{
-background-color: #a9F;
 width: 177px;
 transform: rotate(0deg);
 position: absolute;
 right: 280px;
 top: 298px;
 text-align: center;
-color: #FFF;
 font-weight: bold;
-padding: 9px 0px;
 font-size: 17px;
-box-shadow: 0px 2px 2px #DDD;
 transition: box-shadow 1s ease;
 }
 
-#github:hover{
+#github a{
+padding: 9px 0px;
+background-color: #E16E62;
+margin-bottom: 8px;
+box-shadow: 0px 2px 2px #DDD;
+color: #FFF;
+text-decoration: none;
+	display: block;
+}
+#github a:hover{
 cursor: pointer;
-background-color: #89F;
+background-color: #EFA4A3;
 box-shadow: 0px 2px 4px #777;
 }
 </style>
 	</head>
 <body>
-<div id="github">Github</div>
+<div id="github">
+	<a href="http://philip-nunoo.github.io/">Blog</a>
+	<a href="http://github.com/Philip-Nunoo">Github</a>
+</div>
 <div id="body">
+
 	<div class="menu selector">
+		<img src="balls.png"/>
 		<div class="title">CRUD</div>
 		<div class="sub-title">
 		<a href="create.html">Create</a> | <a href="">Read</a> | <a href="">Update</a> | <a href="../mestpop">Delete</a>
